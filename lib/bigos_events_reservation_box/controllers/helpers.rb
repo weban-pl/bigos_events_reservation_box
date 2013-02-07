@@ -23,7 +23,7 @@ module BigosEventsReservationBox
           }
         end
         @message = BigosEventsReservationBox::Message.new
-        @event_options = events_options
+        @events_options = events_options
         render :partial=>"bigos_events_reservation_box/module/widget", :locals=> {
             :message => @message, :events_options => @events_options }
       end
