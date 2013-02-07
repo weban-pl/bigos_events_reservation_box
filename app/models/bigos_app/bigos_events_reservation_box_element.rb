@@ -2,7 +2,7 @@ module BigosApp
   class BigosEventsReservationBoxElement < PageElement
 
     def self.class_name
-      "Contact module"
+      "Events reservation module"
     end
 
     def render
