@@ -1,0 +1,43 @@
+<div class="form">
+<div id="message_status"></div>
+<%= form_for @message, :url => bigos_events_reservation_box.messages_path do |form| %>
+    <fieldset class="fields">
+      <div class="field">
+        <%= form.select :event_option_id, @events_options %>
+      </div>
+      <div class="field">
+        <%= form.text_field :date_of_party %>
+        <%= form.label "Date of Party" %>
+      </div>
+      <div class="field">
+        <%= form.text_field :arrival_time %>
+        <%= form.label "Arrival Time" %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :end_time %>
+        <%= form.label "End Time" %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :reservation_name %>
+        <%= form.label "Reservation Name" %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :number_in_party %>
+        <%= form.label "Number in Party" %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :contact_number %>
+        <%= form.label "Contact Number" %>
+      </div>
+    </fieldset>
+
+    <fieldset class="actions">
+      <%= form.submit "Send", id: "bigos_events_reservation_submit" %>
+    </fieldset>
+<% end %>
+</div>
+<%= hidden_field_tag :invalid_fields_error,  BigosEventsReservationBox::Setting["#{BigosEventsReservationBox.name}.invalid_fields_error"] %>
