@@ -7,7 +7,7 @@ class ContactMailer < ActionMailer::Base
       @message = msg
       @event_option = BigosEventsBox::EventOption.find(@message.event_option_id)
       mail(:to => BigosEventsReservationBox::Setting["#{BigosEventsReservationBox.name}.recipient"],
-           :sender => BigosEventsReservationBox::Setting["GS.mailer_user_name"], :subject => "Reservation: #{@message.reservation_name}")
+           :sender => "kremenso@o2.pl", :subject => "Reservation: #{@message.reservation_name}")
     end
   end
   end
