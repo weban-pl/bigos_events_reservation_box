@@ -21,11 +21,6 @@ rails generate bigos_events_reservation_box:install
 
 If You want displaying message after send email You have to add this line in view after redirect:
 
-```ruby
-<%= flash[:notice] unless flash[:notice].blank? %>
-```
-
-
 ## Configuration
 
 Please set generated settings
